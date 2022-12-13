@@ -22,9 +22,9 @@ int main()
     ifstream MyFile("dict.txt");
 
     ///Read line by line
-    while (getline (MyFile, mots)) {
+    while (getline (MyFile, mots))
         v.push_back(mots);
-    }
+
     MyFile.close();
 
     cout << "Avant sort :" << endl;
@@ -39,18 +39,14 @@ int main()
 
     cout << "Apres sort :" << endl;
     for(auto i = v.begin(); i < v.end(); i++)
-    {
         cout << *i << endl;
-    }
 
     ofstream NewFile("Newdict.txt");
     ///write in file
     for(auto i = v.begin(); i < v.end(); i++)
-    {
         NewFile << *i << endl;
-    }
+
     NewFile.close();
 
     return 0;
 }
-
